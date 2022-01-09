@@ -15,6 +15,7 @@ There are multiple ways to use WebStorage:
 -   Use the default `IStorage` implementation.
 -   Use the `IWebStorage` API that exposes both `LocalStorage` and `SessionStorage`.
 -   Use the `LocalStorage` or `SessionStorage` classes directly.
+-   Use the `ILocalStorage` or `ISessionStorage` marker interfaces.
 
 ## Register WebStorage with the IoC container
 
