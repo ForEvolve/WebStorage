@@ -111,6 +111,44 @@ public class MyService3
 }
 ```
 
+## Use the marker interfaces
+
+If you don't want to directly inject the implementations, you can leverage the `ILocalStorage` and `ISessionStorage` marker interfaces instead.
+This yields the same result as injecting the classes directly but allows for more flexibility; you could create decorators or mocks for example.
+
+```csharp
+public class MyService1
+{
+    private readonly ILocalStorage _localStorage;
+    public MyService1(ILocalStorage localStorage)
+    {
+        _localStorage = localStorage ?? throw new ArgumentNullException(nameof(localStorage));
+    }
+    // Omitted implementation
+}
+public class MyService2
+{
+    private readonly ISessionStorage _sessionStorage;
+    public MyService2(ISessionStorage sessionStorage)
+    {
+        _sessionStorage = sessionStorage ?? throw new ArgumentNullException(nameof(sessionStorage));
+    }
+    // Omitted implementation
+}
+public class MyService3
+{
+    private readonly ILocalStorage _localStorage;
+    private readonly ISessionStorage _sessionStorage;
+
+    public MyService3(ILocalStorage localStorage, ISessionStorage sessionStorage)
+    {
+        _localStorage = localStorage ?? throw new ArgumentNullException(nameof(localStorage));
+        _sessionStorage = sessionStorage ?? throw new ArgumentNullException(nameof(sessionStorage));
+    }
+    // Omitted implementation
+}
+```
+
 ## The IStorage API
 
 The `IStorage` interface implements synchronous and asynchronous versions of the Web Storage JavaScript API.
@@ -241,7 +279,7 @@ public interface IStorage
 A few `IStorage` extensions allow serializing and deserializing values automatically, so you can get and set items directly.
 
 The default serializer is `JsonWebStorageSerializer` which leverage the `System.Text.Json.JsonSerializer` class.
-You can control its behavior by configuring the `JsonWebStorageSerializerOptions` object like any other options.
+You can control its behavior by configuring the `JsonWebStorageSerializerOptions` object using .NET options pattern.
 
 ### Customize serialization
 

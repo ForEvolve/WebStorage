@@ -15,6 +15,8 @@ public static class WebStorageStartupExtensions
         services.TryAddSingleton(sp => (sp.GetRequiredService<IJSRuntime>() as IJSInProcessRuntime)!);
         services.TryAddSingleton<LocalStorage>();
         services.TryAddSingleton<SessionStorage>();
+        services.TryAddSingleton<ILocalStorage>(sp => sp.GetRequiredService<LocalStorage>());
+        services.TryAddSingleton<ISessionStorage>(sp => sp.GetRequiredService<SessionStorage>());
         services.TryAddSingleton<IWebStorage, WebStorage>();
         services.TryAddSingleton(sp =>
         {
