@@ -1,4 +1,4 @@
-﻿namespace StateR.Blazor.WebStorage;
+﻿namespace ForEvolve.Blazor.WebStorage;
 
 public interface IStorage
 {

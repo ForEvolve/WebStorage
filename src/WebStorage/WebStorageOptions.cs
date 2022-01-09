@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.Options;
 using System.Diagnostics.CodeAnalysis;
 
-namespace StateR.Blazor.WebStorage;
+namespace ForEvolve.Blazor.WebStorage;
 
 public class WebStorageOptions
 {

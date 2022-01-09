@@ -1,6 +1,6 @@
 ﻿using System.Text.Json;
 
-namespace StateR.Blazor.WebStorage;
+namespace ForEvolve.Blazor.WebStorage;
 
 public sealed class JsonWebStorageSerializer : IWebStorageSerializer
 {

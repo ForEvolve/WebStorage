@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.Options;
 using System.Text.Json;
 
-namespace StateR.Blazor.WebStorage;
+namespace ForEvolve.Blazor.WebStorage;
 
 public class JsonWebStorageSerializerOptions
 {

@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 
-namespace StateR.Blazor.WebStorage;
+namespace ForEvolve.Blazor.WebStorage;
 
 public static class StorageExtensions
 {

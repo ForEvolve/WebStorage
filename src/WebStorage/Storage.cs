@@ -1,6 +1,6 @@
 ﻿using Microsoft.JSInterop;
 
-namespace StateR.Blazor.WebStorage;
+namespace ForEvolve.Blazor.WebStorage;
 
 public abstract class Storage : IStorage
 {
