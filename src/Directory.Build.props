@@ -1,0 +1,22 @@
+<Project>
+    <Import Project="..\Directory.Build.props" />
+    <PropertyGroup>
+        <IsPackable>True</IsPackable>
+        <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+        <Authors>Carl-Hugo Marcotte</Authors>
+        <Company>ForEvolve</Company>
+        <PackageProjectUrl>https://github.com/ForEvolve/WebStorage</PackageProjectUrl>
+        <License>MIT</License>
+        <Copyright>Carl-Hugo Marcotte</Copyright>
+        <PublishRepositoryUrl>true</PublishRepositoryUrl>
+        <EmbedUntrackedSources>true</EmbedUntrackedSources>
+        <IncludeSymbols>True</IncludeSymbols>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All"/>
+        <PackageReference Include="Nerdbank.GitVersioning" Version="3.4.244" PrivateAssets="All"/>
+    </ItemGroup>
+
+</Project>
