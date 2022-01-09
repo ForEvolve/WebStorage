@@ -18,6 +18,15 @@ on:
       - '**.yml'
 
   workflow_dispatch:
+    inputs:
+      deployToFeedz:
+        description: 'Deploy to feedz.io'
+        required: true
+        default: 'false'
+      deployToNuGet:
+        description: 'Deploy to nuget.org'
+        required: true
+        default: 'false'
 
 env:
   BUILD_CONFIGURATION: Release
@@ -74,8 +83,8 @@ jobs:
 
       - name: Push to feedz.io
         run: dotnet nuget push **/*.nupkg -k ${{ secrets.FEEDZ_API_KEY }} -s https://f.feedz.io/forevolve/webstorage/nuget/index.json
-        if: github.event_name == 'pull_request'
+        if: github.event_name == 'pull_request' || (github.event_name == 'workflow_dispatch' && github.event.inputs.deployToFeedz == 'true')
 
       - name: Push to NuGet.org
         run: dotnet nuget push **/*.nupkg -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json
-        if: github.event_name == 'push'
+        if: github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && github.event.inputs.deployToNuGet == 'true')
