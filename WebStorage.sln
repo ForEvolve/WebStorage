@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A1294DF1-23AE-4070-AFF2-5C5B30A9B545}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebStorage", "src\WebStorage\WebStorage.csproj", "{FAF66FF7-6339-4F8A-84CA-7216759B970E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{AA8AF6AF-ED4F-4393-9209-43DEF63F18CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebStorage.Tests", "test\WebStorage.Tests\WebStorage.Tests.csproj", "{BFB6A4E3-5D81-4F69-AD3A-F87E739A6463}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FAF66FF7-6339-4F8A-84CA-7216759B970E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAF66FF7-6339-4F8A-84CA-7216759B970E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAF66FF7-6339-4F8A-84CA-7216759B970E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAF66FF7-6339-4F8A-84CA-7216759B970E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFB6A4E3-5D81-4F69-AD3A-F87E739A6463}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFB6A4E3-5D81-4F69-AD3A-F87E739A6463}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFB6A4E3-5D81-4F69-AD3A-F87E739A6463}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFB6A4E3-5D81-4F69-AD3A-F87E739A6463}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FAF66FF7-6339-4F8A-84CA-7216759B970E} = {A1294DF1-23AE-4070-AFF2-5C5B30A9B545}
+		{BFB6A4E3-5D81-4F69-AD3A-F87E739A6463} = {AA8AF6AF-ED4F-4393-9209-43DEF63F18CF}
+	EndGlobalSection
+EndGlobal
