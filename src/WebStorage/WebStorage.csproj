@@ -1,10 +1,13 @@
-<Project Sdk="Microsoft.NET.Sdk.Razor">
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-	<RootNamespace>ForEvolve.Blazor.WebStorage</RootNamespace>
+    <RootNamespace>ForEvolve.Blazor.WebStorage</RootNamespace>
+    <AssemblyName>ForEvolve.Blazor.WebStorage</AssemblyName>
+    <Description>WebStorage is a simple Blazor WebAssembly (Wasm) Web Storage API wrapper. It implements both session storage and local storage.</Description>
+    <PackageTags>webstorage,storage,session,local,sessionStorage,localStorage,blazor,webassembly,wasm,dotnet,dotnetcore,net,netcore,aspnetcore,asp.net,core,aspnet,asp,forevolve</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
