@@ -300,10 +300,10 @@ Also, please read the [Contributor Covenant Code of Conduct](https://github.com/
 
 # Origin & Similar project
 
-This project started because I needed access to the storage API in an object with a Singleton lifetime.
+This project started because I needed access to the storage API in an object with a `Singleton` lifetime.
 So I opened [Web Storage API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API) page on MDN, and created this project.
 
-Here are some alternatives that I know about:
+Here are some alternatives that I know about (using a `Scoped` lifetime):
 
 -   [Blazored SessionStorage](https://github.com/Blazored/SessionStorage)
 -   [Blazored LocalStorage](https://github.com/Blazored/LocalStorage)
